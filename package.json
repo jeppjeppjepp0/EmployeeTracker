@@ -18,8 +18,7 @@
   },
   "homepage": "https://github.com/jeppjeppjepp0/EmployeeTracker#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "inquirer": "^9.2.0",
+    "inquirer": "^6.5.2",
     "mysql2": "^2.2.5"
   }
 }

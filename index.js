@@ -1,33 +1,7 @@
 const inquirer = require('inquirer');
 const mysql = require('mysql2');
+const work = require('./work.js');
 
-function displayEmployees(){
-
-}
-
-function addEmployee(){
-
-}
-
-function updateRole(){
-
-}
-
-function displayRoles(){
-
-}
-
-function addRole(){
-
-}
-
-function displayDepartments(){
-
-}
-
-function addDepartment(){
-
-}
 
 function initialQuestions(){
     inquirer
@@ -47,38 +21,36 @@ function initialQuestions(){
             name: 'choices'
         },
     ])
-    .then((res) => {
+    .then(async (res) => {
         switch (res.choices){
             case 'View All Employees':
-                displayEmployees();
-                initialQuestions();
+                await work.displayEmployees();
                 break;
             case 'Add Employee':
-                addEmployee();
-                initialQuestions();
+                await work.addEmployee();
                 break;
-            case 'Update Employee Role':
-                updateRole();
-                initialQuestions();
-                break;
-            case 'View All Roles':
-                displayRoles();
-                initialQuestions();
-                break;
-            case 'Add Role':
-                addRole();
-                initialQuestions();
-                break;
-            case 'View All Departments':
-                displayDepartments();
-                initialQuestions();
-                break;
-            case 'Add Department':
-                addDepartment();
-                initialQuestions();
-                break;
-            case 'Quit':
-                break;
+            // case 'Update Employee Role':
+            //     updateRole();
+            //     initialQuestions();
+            //     break;
+            // case 'View All Roles':
+            //     displayRoles();
+            //     initialQuestions();
+            //     break;
+            // case 'Add Role':
+            //     addRole();
+            //     initialQuestions();
+            //     break;
+            // case 'View All Departments':
+            //     displayDepartments();
+            //     initialQuestions();
+            //     break;
+            // case 'Add Department':
+            //     addDepartment();
+            //     initialQuestions();
+            //     break;
+            // case 'Quit':
+            //     break;
         }
 
     }
