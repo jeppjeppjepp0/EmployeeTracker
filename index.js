@@ -3,7 +3,7 @@ const mysql = require('mysql2');
 const work = require('./work.js');
 
 
-function initialQuestions(){
+async function initialQuestions(){
     inquirer
     .prompt([
         {
@@ -22,12 +22,14 @@ function initialQuestions(){
         },
     ])
     .then(async (res) => {
-        switch (res.choices){
+        switch (res.choices) {
             case 'View All Employees':
                 await work.displayEmployees();
+                await initialQuestions();
                 break;
             case 'Add Employee':
                 await work.addEmployee();
+                initialQuestions();
                 break;
             case 'Update Employee Role':
                 await work.updateRole();
@@ -50,9 +52,9 @@ function initialQuestions(){
                 initialQuestions();
                 break;
             case 'Quit':
+                console.log('Goodbye!');
                 break;
         }
-
     }
     )
 };

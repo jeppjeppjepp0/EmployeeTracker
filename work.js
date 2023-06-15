@@ -12,10 +12,11 @@ const db = mysql.createConnection(
 );
 
 async function displayEmployees(){
-    db.query(`SELECT * FROM employees;`, 
-            function (err, results) {
+    db.query(`SELECT * FROM employee;`, 
+        function (err, results) {
             console.log(results);
         })
+    return;
 }
 
 async function addEmployee(){
