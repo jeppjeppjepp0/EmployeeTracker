@@ -29,28 +29,28 @@ function initialQuestions(){
             case 'Add Employee':
                 await work.addEmployee();
                 break;
-            // case 'Update Employee Role':
-            //     updateRole();
-            //     initialQuestions();
-            //     break;
-            // case 'View All Roles':
-            //     displayRoles();
-            //     initialQuestions();
-            //     break;
-            // case 'Add Role':
-            //     addRole();
-            //     initialQuestions();
-            //     break;
-            // case 'View All Departments':
-            //     displayDepartments();
-            //     initialQuestions();
-            //     break;
-            // case 'Add Department':
-            //     addDepartment();
-            //     initialQuestions();
-            //     break;
-            // case 'Quit':
-            //     break;
+            case 'Update Employee Role':
+                await work.updateRole();
+                initialQuestions();
+                break;
+            case 'View All Roles':
+                await work.displayRoles();
+                initialQuestions();
+                break;
+            case 'Add Role':
+                await work.addRole();
+                initialQuestions();
+                break;
+            case 'View All Departments':
+                await work.displayDepartments();
+                initialQuestions();
+                break;
+            case 'Add Department':
+                await work.addDepartment();
+                initialQuestions();
+                break;
+            case 'Quit':
+                break;
         }
 
     }
