@@ -1,22 +1,19 @@
 # 12 SQL: Employee Tracker
 
-## # 02 Portfolio Project
-
 ## Technology Used 
 
 | Technology Used         | Resource URL           | 
 | ------------- |:-------------:| 
-| HTML    | [https://developer.mozilla.org/en-US/docs/Web/HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) | 
-| CSS     | [https://developer.mozilla.org/en-US/docs/Web/CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)      |   
-| Git | [https://git-scm.com/](https://git-scm.com/)     |    
+| JavaScript | [https://developer.mozilla.org/en-US/docs/Web/JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)|   
+| Git | [https://git-scm.com/](https://git-scm.com/) |
+| Node.js | [https://nodejs.org/en](https://nodejs.org/en) |
+| NPM | [https://www.npmjs.com/](https://www.npmjs.com/) | 
 
 <hr/>
 
 ## Description 
 
-[Visit the Deployed Site](https://jeppjeppjepp0.github.io/html-git-css-challenge/)
-
-This challenge's goal is to create a website using HTML and CSS to diplay past coding projects and associated images for potential employers. This project focused heavily on the use of flexbox and other advanced CSS concepts. The specific criteria are given below.
+This project focused on using `mysql` commands to manage a database through a command line application. The code built on this assignment focuses on managing a `SQL database` without the use of helpers such as `sequelize`.
 
 ```md
 GIVEN a command-line application that accepts user input
