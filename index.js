@@ -1,9 +1,16 @@
 const inquirer = require('inquirer');
 const mysql = require('mysql2');
-const work = require('./work.js');
+const { displayEmployees, 
+        addEmployee,
+        updateRole,
+        displayRoles,
+        addRole,
+        displayDepartments,
+        addDepartment
+        } = require('./work.js');
 
 
-async function initialQuestions(){
+function initialQuestions(){
     inquirer
     .prompt([
         {
@@ -24,31 +31,31 @@ async function initialQuestions(){
     .then(async (res) => {
         switch (res.choices) {
             case 'View All Employees':
-                await work.displayEmployees();
-                await initialQuestions();
+                await displayEmployees();
+                initialQuestions();
                 break;
             case 'Add Employee':
-                await work.addEmployee();
+                await addEmployee();
                 initialQuestions();
                 break;
             case 'Update Employee Role':
-                await work.updateRole();
+                await updateRole();
                 initialQuestions();
                 break;
             case 'View All Roles':
-                await work.displayRoles();
+                await displayRoles();
                 initialQuestions();
                 break;
             case 'Add Role':
-                await work.addRole();
+                await addRole();
                 initialQuestions();
                 break;
             case 'View All Departments':
-                await work.displayDepartments();
+                await displayDepartments();
                 initialQuestions();
                 break;
             case 'Add Department':
-                await work.addDepartment();
+                await addDepartment();
                 initialQuestions();
                 break;
             case 'Quit':
